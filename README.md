@@ -51,7 +51,7 @@ A full-stack web application that analyzes code snippets and estimates their tim
 
 ### 📊 Output Result
 
-![Output](./screenshots/output.png)
+Screenshots/OUTPUT.PNG.png
 
 ---
 
