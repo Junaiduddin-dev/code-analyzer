@@ -39,7 +39,7 @@ A full-stack web application that analyzes code snippets and estimates their tim
 
 ### 🧑‍💻 Main Interface
 
-![Main UI](./screenshots/main.png)
+![Main UI](https://raw.githubusercontent.com/Junaiduddin-dev/code-analyzer/main/screenshots/main.png)
 
 ---
 
