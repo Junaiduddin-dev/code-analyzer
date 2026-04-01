@@ -45,7 +45,7 @@ A full-stack web application that analyzes code snippets and estimates their tim
 
 ### 🔍 Code Input Example
 
-![Code Input](./screenshots/input.png)
+[![Code Input](./screenshots/input.png)](https://github.com/Junaiduddin-dev/code-analyzer/blob/main/Screenshots/INPUT.PNG.png)
 
 ---
 
