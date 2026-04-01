@@ -1,19 +1,8 @@
 from flask import Flask, render_template, request
-import mysql.connector
 
 app = Flask(__name__)
 
-# 🔹 1. Database connection
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Junaid@1",
-    database="code_analyzer"
-)
-
-cursor = db.cursor()
-
-# 🔹 2. ✅ PASTE analyze_code HERE
+# 🔥 Smart Code Analyzer Logic
 def analyze_code(code):
     lines = code.split("\n")
 
@@ -51,14 +40,15 @@ def analyze_code(code):
     if max_depth >= 3:
         return "O(n^3)", "High complexity! Reduce nested loops."
     elif max_depth == 2:
-        return "O(n^2)", "Try optimizing nested loops using better logic."
+        return "O(n^2)", "Try optimizing nested loops."
     elif loop_count >= 1:
         return "O(n)", "Good. Can optimize further."
     elif recursion:
-        return "O(n) or O(2^n)", "Use memoization (Dynamic Programming)."
+        return "O(n) or O(2^n)", "Use memoization (DP)."
     else:
         return "O(1)", "Highly efficient."
-# 🔹 3. Route (DO NOT paste above this)
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     result = None
@@ -66,20 +56,12 @@ def index():
 
     if request.method == "POST":
         code = request.form["code"]
-        complexity, suggestion = analyze_code(code)  # 👈 used here
+        result, suggestion = analyze_code(code)
 
-        cursor.execute(
-            "INSERT INTO submissions (code, complexity) VALUES (%s, %s)",
-            (code, complexity)
-        )
-        db.commit()
-
-        result = complexity
-
-    cursor.execute("SELECT * FROM submissions ORDER BY id DESC")
-    data = cursor.fetchall()
+    data = []  # 🔥 No DB (important for deployment)
 
     return render_template("index.html", result=result, suggestion=suggestion, data=data)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
