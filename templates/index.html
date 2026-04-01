@@ -115,33 +115,3 @@
     </div>
 </div>
 {% endif %}
-
-<h3>📊 History</h3>
-
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Code</th>
-        <th>Complexity</th>
-        <th>Time</th>
-    </tr>
-
-    {% for row in data %}
-    <tr>
-        <td>{{ row[0] }}</td>
-        <td>{{ row[1] }}</td>
-        <td>{{ row[2] }}</td>
-        <td>{{ row[3] }}</td>
-    </tr>
-    {% endfor %}
-</table>
-
-<script>
-function copyText(text) {
-    navigator.clipboard.writeText(text);
-    alert("Copied: " + text);
-}
-</script>
-
-</body>
-</html>
