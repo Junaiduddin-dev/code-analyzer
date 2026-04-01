@@ -51,7 +51,7 @@ A full-stack web application that analyzes code snippets and estimates their tim
 
 ### 📊 Output Result
 
-[![Code Output](./screenshots/input.png)](https://github.com/Junaiduddin-dev/code-analyzer/blob/main/Screenshots/INPUT.PNG.png)
+[![Code Output](./screenshots/output.png)](https://github.com/Junaiduddin-dev/code-analyzer/blob/main/Screenshots/OUTPUT.PNG.png)
 
 ---
 
