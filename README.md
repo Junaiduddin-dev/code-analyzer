@@ -94,7 +94,7 @@ python app.py
 
 ## 👨‍💻 Author
 
-**Junaid**
+**Juneduddin**
 🔗 https://github.com/Junaiduddin-dev
 
 ---
